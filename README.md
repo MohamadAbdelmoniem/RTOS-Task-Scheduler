@@ -19,9 +19,9 @@ The RTOS Task Scheduler is a simple yet versatile task scheduling system designe
 ### Functions
 - `RTOS_u8CreateTask`: Create a new task with specified parameters.
 - `scheduler`: The main scheduler function that manages task execution.
-- `RTos_DeleteTask`: Delete a task by priority.
-- `Rtos_Suspend`: Suspend a task by priority.
-- `Rtos_ResumeTask`: Resume a suspended task by priority.
+- `RTOS_DeleteTask`: Delete a task by priority.
+- `RTOS_Suspend`: Suspend a task by priority.
+- `RTOS_ResumeTask`: Resume a suspended task by priority.
 
 ### Error Handling
 - Priority Error (Return Code 1): Occurs when trying to create a task with an invalid priority.
@@ -40,10 +40,10 @@ void SysTick_Handler(void) {
 }
 
 // Delete a task
-RTos_DeleteTask(1); // Delete the task with priority 1
+RTOS_DeleteTask(1); // Delete the task with priority 1
 
 // Suspend and resume tasks
-Rtos_Suspend(2);   // Suspend the task with priority 2
-Rtos_ResumeTask(2); // Resume the suspended task with priority 2
+RTOS_Suspend(2);   // Suspend the task with priority 2
+RTOS_ResumeTask(2); // Resume the suspended task with priority 2
 ```
 ---
